@@ -1,0 +1,4 @@
+C:/Users/Jake/Documents/Vexal2/vexal/vc9_x86/CMakeFiles/ALL_BUILD.dir
+C:/Users/Jake/Documents/Vexal2/vexal/vc9_x86/CMakeFiles/GLEW.dir
+C:/Users/Jake/Documents/Vexal2/vexal/vc9_x86/CMakeFiles/GLFW.dir
+C:/Users/Jake/Documents/Vexal2/vexal/vc9_x86/CMakeFiles/ZERO_CHECK.dir
