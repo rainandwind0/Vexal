@@ -230,11 +230,11 @@
 				Name="Output"
 				>
 				<File
-					RelativePath=".\console.h"
+					RelativePath=".\console.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\logger.h"
+					RelativePath=".\logger.hpp"
 					>
 				</File>
 			</Filter>

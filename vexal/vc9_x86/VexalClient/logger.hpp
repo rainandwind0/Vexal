@@ -6,7 +6,7 @@
 
 #include <fstream>
 
-#include "defs.h"
+#include "defs.hpp"
 
 // Log macros (Helps cut down on overhead
 //     when we don't need logging)

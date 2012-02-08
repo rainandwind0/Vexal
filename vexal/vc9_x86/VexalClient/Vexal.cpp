@@ -34,7 +34,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	
 	// Init OpenGL/Graphics
 	if(OGLStartup() > V_SUCCESS)
-		return ;
+		return 1;
 	else
 		f1("OGLStartup succeeded!");
 	
