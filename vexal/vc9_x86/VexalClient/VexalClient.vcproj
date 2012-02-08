@@ -24,6 +24,8 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
+				Description="Increment build include file..."
+				CommandLine="vers.exe"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -46,6 +48,7 @@
 				RuntimeLibrary="1"
 				WarningLevel="3"
 				DebugInformationFormat="4"
+				CallingConvention="2"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -200,7 +203,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\resource.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Vexal.h"
+				>
+			</File>
+			<File
+				RelativePath=".\vversion.h"
 				>
 			</File>
 			<Filter
@@ -224,7 +235,39 @@
 				</File>
 			</Filter>
 		</Filter>
+		<File
+			RelativePath=".\VexalClient.rc"
+			>
+		</File>
 	</Files>
 	<Globals>
+		<Global
+			Name="BuildVersion_AssemblyInfoFilename"
+			Value=""
+		/>
+		<Global
+			Name="BuildVersion_BuildVersioningStyle"
+			Value="None.None.None.Increment"
+		/>
+		<Global
+			Name="BuildVersion_IncrementBeforeBuild"
+			Value="True"
+		/>
+		<Global
+			Name="BuildVersion_StartDate"
+			Value="2012/2/7"
+		/>
+		<Global
+			Name="BuildVersion_UpdateAssemblyVersion"
+			Value="True"
+		/>
+		<Global
+			Name="BuildVersion_UpdateFileVersion"
+			Value="True"
+		/>
+		<Global
+			Name="BuildVersion_UseGlobalSettings"
+			Value="False"
+		/>
 	</Globals>
 </VisualStudioProject>

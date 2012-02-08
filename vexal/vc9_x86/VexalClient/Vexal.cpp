@@ -21,6 +21,7 @@
 #include "glm/glm.hpp"
 #include "logger.h"
 #include "defs.h"
+#include "vversion.h"
 
 using namespace glm;
 using namespace std;
@@ -30,9 +31,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	// Generate logger instance (instantiate logging)
 	VLogInit();
 
-	// Log!
-	i("Testing!!!");
-	Sleep(1000);
+	// Log Title + Version
+	i("Vexal Online "V_FULLVERSION);
+	
 
 	// All okay!
 	return 0;
