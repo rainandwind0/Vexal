@@ -27,6 +27,8 @@
 /*
  * Error Codes
  */
+#define V_SUCCESS				0x00
+
 #define V_ERR_OGL_GLFWINIT		0x01
 
 #endif

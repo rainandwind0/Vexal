@@ -6,7 +6,7 @@
 #include <io.h>
 #include <fcntl.h>
 
-#include "defs.h"
+#include "defs.hpp"
 
 namespace vexal
 {

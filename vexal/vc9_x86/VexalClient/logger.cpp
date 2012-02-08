@@ -2,9 +2,9 @@
  * Logger - handles logging/output functions
  */
 
-#include "logger.h"
-#include "console.h"
-#include "defs.h"
+#include "logger.hpp"
+#include "console.hpp"
+#include "defs.hpp"
 
 #include <Windows.h>
 #include <iostream>

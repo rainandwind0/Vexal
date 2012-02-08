@@ -2,7 +2,7 @@
  * OGLInit - All of the initial graphics handling
  */
 
-#include "logger.h"
+#include "logger.hpp"
 #include "GL/glfw.h"
 
 namespace vexal

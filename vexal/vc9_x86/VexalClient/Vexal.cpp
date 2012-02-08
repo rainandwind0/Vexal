@@ -17,9 +17,9 @@
 #include <Windows.h>
 #include <iostream>
 
-#include "logger.h"
-#include "vversion.h"
-#include "OGLInit.h"
+#include "logger.hpp"
+#include "vversion.hpp"
+#include "OGLInit.hpp"
 
 using namespace std;
 using namespace vexal;
@@ -33,12 +33,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	i("Vexal Online "V_FULLVERSION);
 	
 	// Init OpenGL/Graphics
-	if(OGLStartup() > 0)
-		return 1;
+	if(OGLStartup() > V_SUCCESS)
+		return ;
 	else
 		f1("OGLStartup succeeded!");
 	
 	// All okay!
 	f1("Terminating Program");
-	return 0;
+	return V_SUCCESS;
 }

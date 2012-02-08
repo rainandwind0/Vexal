@@ -3,8 +3,8 @@
  */
 
 
-#include "logger.h"
-#include "tcpclient.h"
+#include "logger.hpp"
+#include "tcpclient.hpp"
 
 #include <winsock2.h>
 

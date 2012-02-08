@@ -211,19 +211,19 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\defs.h"
+				RelativePath=".\defs.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\resource.h"
+				RelativePath=".\resource.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\Vexal.h"
+				RelativePath=".\Vexal.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\vversion.h"
+				RelativePath=".\vversion.hpp"
 				>
 			</File>
 			<Filter
@@ -242,7 +242,7 @@
 				Name="Net"
 				>
 				<File
-					RelativePath=".\tcpclient.h"
+					RelativePath=".\tcpclient.hpp"
 					>
 				</File>
 			</Filter>
@@ -250,7 +250,7 @@
 				Name="OGL"
 				>
 				<File
-					RelativePath=".\OGLInit.h"
+					RelativePath=".\OGLInit.hpp"
 					>
 				</File>
 			</Filter>
