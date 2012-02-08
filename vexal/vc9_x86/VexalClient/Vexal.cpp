@@ -31,12 +31,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	// Generate logger instance (instantiate logging)
 	VLogInit();
 
-	// Test log
-	for(int i = 0; i < 100; i++)
-		i("Hello, linux!");
-
-	Sleep(5000);
-
 	// All okay!
 	return 0;
 }

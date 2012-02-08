@@ -24,13 +24,7 @@ namespace vexal
 			Log::inst = new Log(level);
 	}
 
-	void Log::li(const char* msg, int level)
-	{
-		// Send message
-		inst->_msgInd("[INFO] ", msg, level);
-	}
-
-	void Log::_msgInd(const char* tag, const char* msg, int level)
+	void Log::msgInd(const char* tag, const char* msg, int level)
 	{
 		// Switch level
 		switch(level)
@@ -44,7 +38,7 @@ namespace vexal
 			OutputDebugString("\n");
 			break;
 		case 1: // Output to log file
-			(*flLog) << tag << msg << std::endl;
+			(*(inst->flLog)) << tag << msg << std::endl;
 			break;
 		}
 	}
