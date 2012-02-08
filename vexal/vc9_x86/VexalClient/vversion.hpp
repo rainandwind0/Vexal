@@ -13,7 +13,7 @@
 #ifndef V_VERSION_H__
 #define V_VERSION_H__
 
-#define V_VERSION "v0.0.0.66"
+#define V_VERSION "v0.0.0.67"
 #define V_VUSERFRIENDLY " (Alpha 1)"
 #define V_FULLVERSION V_VERSION V_VUSERFRIENDLY
 
