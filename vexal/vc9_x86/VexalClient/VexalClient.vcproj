@@ -61,7 +61,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib"
+				AdditionalDependencies="ws2_32.lib GLEW.lib GLFW.lib"
 				AdditionalLibraryDirectories="C:\Users\Jake\Documents\Vexal2\vexal\vc9_x86\lib\Debug"
 				GenerateDebugInformation="true"
 				TargetMachine="1"
@@ -133,6 +133,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="ws2_32.lib GLEW.lib GLFW.lib"
 				AdditionalLibraryDirectories="C:\Users\Jake\Documents\Vexal2\vexal\vc9_x86\lib\Release"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
