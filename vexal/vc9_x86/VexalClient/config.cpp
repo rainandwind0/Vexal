@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 #include "config.hpp"
 #include "libconfig.h++"
@@ -46,9 +47,23 @@ namespace vexal
 			return;
 		}
 	
-		config->getRoot().add("testentry", libconfig::Setting::TypeString) = "This is a test!";
+		f3(Config::GetString("testentry"));
 
-		config->writeFile("vexal.cfg");
+		//config->getRoot().add("testentry", libconfig::Setting::TypeString) = "This is a test!";
+
+		//config->writeFile("vexal.cfg");
+	}
+
+	char* Config::GetString(const char* node)
+	{
+		// Create SS
+		std::string s = (std::string)(inst->config->lookup(node));
+		
+		// Convert from const
+		const char* cc = s.c_str();
+
+		// Return
+		return const_cast<char*>(cc);
 	}
 
 	void Config::touch()

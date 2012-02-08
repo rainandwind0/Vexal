@@ -20,6 +20,13 @@ namespace vexal
 		static void GenInst();
 
 		static char* GetString(const char* node);
+		static char* GetString(const char* node, const char* def);
+		
+		static int GetInt(const char* node);
+		static int GetInt(const char* node, int def);
+
+		static int GetBool(const char* node);
+		static int GetBool(const char* node, bool def);
 
 	private:
 		Config();
