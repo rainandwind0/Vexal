@@ -17,14 +17,12 @@
 #include <Windows.h>
 #include <iostream>
 
-#include "gl/glfw.h"
-#include "glm/glm.hpp"
 #include "logger.h"
-#include "defs.h"
 #include "vversion.h"
+#include "OGLInit.h"
 
-using namespace glm;
 using namespace std;
+using namespace vexal;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, int nShowCmd)
 {
@@ -34,8 +32,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	// Log Title + Version
 	i("Vexal Online "V_FULLVERSION);
 	
-	
+	// Init OpenGL/Graphics
+	if(!OGLStartup())
+		return 1;
 
+	
 	// All okay!
+	f1("Terminating Program");
 	return 0;
 }

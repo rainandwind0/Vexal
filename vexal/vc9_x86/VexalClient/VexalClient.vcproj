@@ -192,6 +192,14 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="OGL"
+				>
+				<File
+					RelativePath=".\OGLInit.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -231,6 +239,14 @@
 				>
 				<File
 					RelativePath=".\tcpclient.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="OGL"
+				>
+				<File
+					RelativePath=".\OGLInit.h"
 					>
 				</File>
 			</Filter>
