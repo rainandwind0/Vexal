@@ -34,6 +34,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	// Log Title + Version
 	i("Vexal Online "V_FULLVERSION);
 	
+	
 
 	// All okay!
 	return 0;

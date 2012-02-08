@@ -41,13 +41,13 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="0"
+				Optimization="3"
 				AdditionalIncludeDirectories="C:\Users\Jake\Documents\Vexal2\glm;C:\Users\Jake\Documents\Vexal2\glfw\include;C:\Users\Jake\Documents\Vexal2\glew\include"
 				MinimalRebuild="true"
-				BasicRuntimeChecks="3"
+				BasicRuntimeChecks="0"
 				RuntimeLibrary="1"
 				WarningLevel="3"
-				DebugInformationFormat="4"
+				DebugInformationFormat="3"
 				CallingConvention="2"
 			/>
 			<Tool
