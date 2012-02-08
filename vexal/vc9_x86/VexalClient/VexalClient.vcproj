@@ -58,6 +58,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="ws2_32.lib"
 				GenerateDebugInformation="true"
 				TargetMachine="1"
 			/>
@@ -180,6 +181,14 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="Net"
+				>
+				<File
+					RelativePath=".\tcpclient.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -203,6 +212,14 @@
 				</File>
 				<File
 					RelativePath=".\logger.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Net"
+				>
+				<File
+					RelativePath=".\tcpclient.h"
 					>
 				</File>
 			</Filter>
