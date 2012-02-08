@@ -19,7 +19,8 @@
 
 #include "gl/glfw.h"
 #include "glm/glm.hpp"
-#include "console.h"
+#include "logger.h"
+#include "defs.h"
 
 using namespace glm;
 using namespace vexal;
@@ -27,8 +28,14 @@ using namespace std;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, int nShowCmd)
 {
-	// Redirect output
-	VAttachConsole();
+	// Generate logger instance (instantiate logging)
+	VLogInit();
+
+	// Test log
+	for(int i = 0; i < 100; i++)
+		i("Hello, linux!");
+
+	Sleep(5000);
 
 	// All okay!
 	return 0;
