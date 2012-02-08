@@ -14,6 +14,7 @@ namespace vexal
 	bool __stdcall OGLStartup()
 	{
 		// Attempt to start up GLFW
+		f1("Attempting to start up GLFW");
 		if(!glfwInit())
 		{
 			e("Could not start up GLFW!");
@@ -22,12 +23,14 @@ namespace vexal
 		}
 
 		// Create window hints
+		f1("Setting window hints");
 		glfwOpenWindowHint(GLFW_FSAA_SAMPLES, V_OGL_ANTIALIAS);
 		glfwOpenWindowHint(GLFW_OPENGL_VERSION_MAJOR, 4); // We want 4.0!
 		glfwOpenWindowHint(GLFW_OPENGL_VERSION_MINOR, 0);
 		glfwOpenWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 		// Create the window
+		f1("Creating main window");
 		if(!glfwOpenWindow(V_OGL_WINDOW_W, V_OGL_WINDOW_H, 0, 0, 0 ,0, 32, 0, GLFW_WINDOW))
 		{
 			e("Could not create main window!");
@@ -36,13 +39,26 @@ namespace vexal
 		}
 
 		// Attempt to start up Glew
-		if(!glewInit())
+		f1("Attempting to startup Glew");
+		if(glewInit() != GLEW_OK)
 		{
 			// Error and return
 			e("Could not instantiate Glew!");
 			SetVError(V_ERR_OGL_GLEWINIT);
 			return false;
 		}
+
+		// Set the window's title
+		f1("Setting window title");
+		glfwSetWindowTitle(V_WINDOW_TITLE);
+
+		// Clear the screen / set BG color
+		f1("Clearing background");
+		glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+
+		// Lastly, setup basic sticky keys
+		f1("Enabling sticky keys");
+		glfwEnable(GLFW_STICKY_KEYS);
 
 		// All is good
 		return true;

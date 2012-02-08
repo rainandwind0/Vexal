@@ -1,2 +1,10 @@
-[INFO] Vexal Online v0.0.0.90 (Alpha 1)
-[ERROR] Could not instantiate Glew!
+[INFO] Vexal Online v0.0.0.92 (Alpha 1)
+[FINE] Attempting to start up GLFW
+[FINE] Setting window hints
+[FINE] Creating main window
+[FINE] Attempting to startup Glew
+[FINE] Setting window title
+[FINE] Clearing background
+[FINE] Enabling sticky keys
+[FINE] OGLStartup succeeded!
+[FINE] Terminating Program

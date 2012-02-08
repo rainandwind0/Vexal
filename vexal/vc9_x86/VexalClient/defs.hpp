@@ -21,6 +21,11 @@
 #define V_CONSOLE_SCROLLBACK 1000
 
 /*
+ * Define Window Title
+ */
+#define V_WINDOW_TITLE "Vexal Online"
+
+/*
  * Define Anti-Aliasing
  */
 #define V_OGL_ANTIALIAS 4

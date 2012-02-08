@@ -38,10 +38,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	// Init OpenGL/Graphics
 	if(!OGLStartup())
 		return GetLastVError();
-	else
+	else // Log that we succeeded
 		f1("OGLStartup succeeded!");
 	
+	// Fork thread
+
 	// All okay!
 	f1("Terminating Program");
 	return V_SUCCESS;
 }
+
