@@ -20,6 +20,17 @@
  */
 #define V_CONSOLE_SCROLLBACK 1000
 
+/*
+ * Define Anti-Aliasing
+ */
+#define V_OGL_ANTIALIAS 4
+
+/*
+ * Define Window Size
+ */
+#define V_OGL_WINDOW_W 800
+#define V_OGL_WINDOW_H 600
+
 /*********************************************
  * DO NOT EDIT PAST THIS LINE
  ********************************************/
@@ -30,6 +41,7 @@
 #define V_SUCCESS				0x00
 
 #define V_ERR_OGL_GLFWINIT		0x01
-#define V_ERR_OGL_GLEWINIT		0x02
+#define V_ERR_OGL_WINDOW		0x02
+#define V_ERR_OGL_GLEWINIT		0x03
 
 #endif
