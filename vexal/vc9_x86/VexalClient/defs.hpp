@@ -49,4 +49,6 @@
 #define V_ERR_OGL_WINDOW		0x02
 #define V_ERR_OGL_GLEWINIT		0x03
 
+#define V_ERR_CFG_UNKNOWNERR	0x10
+
 #endif

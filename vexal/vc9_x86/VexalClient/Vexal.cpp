@@ -21,6 +21,7 @@
 #include "vversion.hpp"
 #include "OGLInit.hpp"
 #include "verror.hpp"
+#include "config.hpp"
 
 #include "gl/glew.h"
 #include "gl/glfw.h"
@@ -56,6 +57,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	else // Log that we succeeded
 		f1("OGLStartup succeeded!");
 	
+	Config::GenInst();
+
 	// Fork thread for window events
 	hMainWindow = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)&tcbMainWindow, NULL, 0, thMainWindow);
 	

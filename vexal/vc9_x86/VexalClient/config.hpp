@@ -8,7 +8,6 @@
 
 #include <fstream>
 
-using namespace libconfig;
 
 namespace vexal
 {
@@ -26,8 +25,10 @@ namespace vexal
 		Config();
 		~Config();
 
+		void touch();
+
 		std::ofstream hFile;
-		Config config;
+		libconfig::Config* config;
 
 		static Config* inst;
 	};
