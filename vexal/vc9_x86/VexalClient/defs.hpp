@@ -30,5 +30,6 @@
 #define V_SUCCESS				0x00
 
 #define V_ERR_OGL_GLFWINIT		0x01
+#define V_ERR_OGL_GLEWINIT		0x02
 
 #endif

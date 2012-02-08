@@ -22,6 +22,8 @@
 #include "OGLInit.hpp"
 #include "verror.hpp"
 
+#include "gl/glew.h"
+
 using namespace std;
 using namespace vexal;
 
@@ -32,7 +34,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 
 	// Log Title + Version
 	i("Vexal Online "V_FULLVERSION);
-	
+
 	// Init OpenGL/Graphics
 	if(!OGLStartup())
 		return GetLastVError();

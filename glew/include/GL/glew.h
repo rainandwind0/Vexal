@@ -177,11 +177,14 @@ typedef _W64 int ptrdiff_t;
  */
 
 #ifdef GLEW_STATIC
-#  define GLEWAPI extern
+#	pragma comment(user, "Glew Static triggered")
+#  define GLEWAPI extern __declspec(dllexport)
 #else
 #  ifdef GLEW_BUILD
+#	pragma comment(user, "Glew Build triggered")
 #    define GLEWAPI extern __declspec(dllexport)
 #  else
+#	pragma comment(user, "Glew Build NOT triggered")
 #    define GLEWAPI extern __declspec(dllimport)
 #  endif
 #endif

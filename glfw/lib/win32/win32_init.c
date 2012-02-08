@@ -205,7 +205,7 @@ static void _glfwTerminateThreads( void )
 // Terminate GLFW when exiting application
 //========================================================================
 
-void _glfwTerminate_atexit( void )
+void __cdecl _glfwTerminate_atexit( void )
 {
     glfwTerminate();
 }

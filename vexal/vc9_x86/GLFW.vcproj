@@ -64,6 +64,7 @@
 				ProgramDataBaseFileName="C:\Users\Jake\Documents\Vexal2\vexal\vc9_x86\lib\Debug/GLFW.pdb"
 				WarningLevel="3"
 				DebugInformationFormat="3"
+				CallingConvention="2"
 				CompileAs="1"
 			/>
 			<Tool

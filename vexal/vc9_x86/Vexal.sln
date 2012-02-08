@@ -2,8 +2,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcproj", "{0BEAD057-91E7-43F2-8544-C921BDAA59CB}"
 	ProjectSection(ProjectDependencies) = postProject
-		{FFF04470-9D55-42ED-948C-0DFAD8DC956B} = {FFF04470-9D55-42ED-948C-0DFAD8DC956B}
 		{FFFECD5E-741F-4055-B92F-97E5D816DBC8} = {FFFECD5E-741F-4055-B92F-97E5D816DBC8}
+		{FFF04470-9D55-42ED-948C-0DFAD8DC956B} = {FFF04470-9D55-42ED-948C-0DFAD8DC956B}
 		{868AC3B9-4BF4-4166-90E2-18AD4D5AFB26} = {868AC3B9-4BF4-4166-90E2-18AD4D5AFB26}
 	EndProjectSection
 EndProject
@@ -20,6 +20,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcproj", "{868AC3B9-4BF4-4166-90E2-18AD4D5AFB26}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VexalClient", "VexalClient\VexalClient.vcproj", "{AF8CF87D-71FE-40B1-A06F-4E798AFBBFD4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FFFECD5E-741F-4055-B92F-97E5D816DBC8} = {FFFECD5E-741F-4055-B92F-97E5D816DBC8}
+		{FFF04470-9D55-42ED-948C-0DFAD8DC956B} = {FFF04470-9D55-42ED-948C-0DFAD8DC956B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,10 +74,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		BuildVersion_UseGlobalSettings = False
-		BuildVersion_UpdateAssemblyVersion = False
-		BuildVersion_UpdateFileVersion = False
-		BuildVersion_AssemblyInfoFilename = 
 		BuildVersion_BuildVersioningStyle = None.None.None.Increment
+		BuildVersion_AssemblyInfoFilename = 
+		BuildVersion_UpdateFileVersion = False
+		BuildVersion_UpdateAssemblyVersion = False
+		BuildVersion_UseGlobalSettings = False
 	EndGlobalSection
 EndGlobal

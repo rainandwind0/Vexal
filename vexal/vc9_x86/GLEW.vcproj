@@ -51,19 +51,20 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions=" /Zm1000"
+				AdditionalOptions=" /Zm1000 /D &quot;GLEW_STATIC&quot; /D &quot;GLEW_BUILD&quot;"
 				Optimization="0"
 				InlineFunctionExpansion="0"
 				AdditionalIncludeDirectories="C:\Users\Jake\Documents\Vexal2\glfw\lib\win32;C:\Users\Jake\Documents\Vexal2\glfw\lib;C:\Users\Jake\Documents\Vexal2\glfw\include;C:\Users\Jake\Documents\Vexal2\glew\include;"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
 				ExceptionHandling="0"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="2"
+				RuntimeLibrary="1"
 				AssemblerListingLocation="Debug"
 				ObjectFile="$(IntDir)\"
 				ProgramDataBaseFileName="C:\Users\Jake\Documents\Vexal2\vexal\vc9_x86\lib\Debug/GLEW.pdb"
 				WarningLevel="3"
 				DebugInformationFormat="3"
+				CallingConvention="2"
 				CompileAs="1"
 			/>
 			<Tool
