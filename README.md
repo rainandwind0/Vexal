@@ -1,4 +1,4 @@
-<img src="https://github.com/rainandwind0/Vexal/raw/master/vexal.png" />
+<img src="https://github.com/Qix-/Vexal/raw/master/vexal.png" />
 
 **NOTE TO PULL REQUESTERS** 
 
