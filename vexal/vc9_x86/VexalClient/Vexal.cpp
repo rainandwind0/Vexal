@@ -84,9 +84,6 @@ DWORD tcbMainWindow(LPVOID lpdwThreadParam)
 	// Begin window loop
 	do
 	{
-		// Swap buffers
-		glfwSwapBuffers();
-
 
 	} // Escape key or window closed
 	while(glfwGetKey(GLFW_KEY_ESC) != GLFW_PRESS && glfwGetWindowParam(GLFW_OPENED));

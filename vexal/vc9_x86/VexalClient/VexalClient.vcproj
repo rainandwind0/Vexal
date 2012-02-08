@@ -209,6 +209,10 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="File"
+				>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -262,6 +266,10 @@
 					RelativePath=".\OGLInit.hpp"
 					>
 				</File>
+			</Filter>
+			<Filter
+				Name="File"
+				>
 			</Filter>
 		</Filter>
 		<File
