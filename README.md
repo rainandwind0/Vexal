@@ -1,4 +1,4 @@
-VEXAL
+<img src="nameir.dyndns.org/vexal/vexal.png" />
 
-**NOTE TO PULL REQUESTERS**
+**NOTE TO PULL REQUESTERS** 
 Please make a fork of a specific system, NOT a fork of the master branch unless *absolutely necessary*.
