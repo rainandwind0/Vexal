@@ -43,7 +43,7 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/D &quot;GLEW_STATIC&quot;"
 				Optimization="3"
-				AdditionalIncludeDirectories="C:\Users\Jake\Documents\Vexal2\glm;C:\Users\Jake\Documents\Vexal2\glfw\include;C:\Users\Jake\Documents\Vexal2\glew\include"
+				AdditionalIncludeDirectories="C:\Users\Jake\Documents\Vexal2\libconfig\lib;C:\Users\Jake\Documents\Vexal2\glm;C:\Users\Jake\Documents\Vexal2\glfw\include;C:\Users\Jake\Documents\Vexal2\glew\include"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="0"
 				RuntimeLibrary="1"
@@ -63,7 +63,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/VERBOSE"
-				AdditionalDependencies="ws2_32.lib GLEW.lib GLFW.lib opengl32.lib"
+				AdditionalDependencies="ws2_32.lib GLEW.lib GLFW.lib opengl32.lib lbcfg_d.lib"
 				AdditionalLibraryDirectories="C:\Users\Jake\Documents\Vexal2\vexal\vc9_x86\lib\Debug"
 				GenerateDebugInformation="true"
 				TargetMachine="1"
@@ -135,7 +135,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib GLEW.lib GLFW.lib opengl32.lib"
+				AdditionalDependencies="ws2_32.lib GLEW.lib GLFW.lib opengl32.lib lbcfg.lib"
 				AdditionalLibraryDirectories="C:\Users\Jake\Documents\Vexal2\vexal\vc9_x86\lib\Release"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
@@ -212,6 +212,10 @@
 			<Filter
 				Name="File"
 				>
+				<File
+					RelativePath=".\config.cpp"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
@@ -270,6 +274,10 @@
 			<Filter
 				Name="File"
 				>
+				<File
+					RelativePath=".\config.hpp"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<File

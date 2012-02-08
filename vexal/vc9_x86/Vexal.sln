@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VexalClient", "VexalClient\
 		{FFF04470-9D55-42ED-948C-0DFAD8DC956B} = {FFF04470-9D55-42ED-948C-0DFAD8DC956B}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libconfig++", "..\..\libconfig\lib\libconfig++.vcproj", "{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -69,6 +71,14 @@ Global
 		{AF8CF87D-71FE-40B1-A06F-4E798AFBBFD4}.Release|Win32.Build.0 = Release|Win32
 		{AF8CF87D-71FE-40B1-A06F-4E798AFBBFD4}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
 		{AF8CF87D-71FE-40B1-A06F-4E798AFBBFD4}.RelWithDebInfo|Win32.Build.0 = Release|Win32
+		{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}.Debug|Win32.Build.0 = Debug|Win32
+		{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}.MinSizeRel|Win32.ActiveCfg = Release|Win32
+		{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}.MinSizeRel|Win32.Build.0 = Release|Win32
+		{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}.Release|Win32.ActiveCfg = Release|Win32
+		{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}.Release|Win32.Build.0 = Release|Win32
+		{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
+		{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}.RelWithDebInfo|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
