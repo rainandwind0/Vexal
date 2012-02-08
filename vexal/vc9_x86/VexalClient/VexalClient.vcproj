@@ -173,6 +173,10 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\verror.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Vexal.cpp"
 				>
 			</File>
@@ -216,6 +220,10 @@
 			</File>
 			<File
 				RelativePath=".\resource.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\verror.hpp"
 				>
 			</File>
 			<File

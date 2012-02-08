@@ -3,22 +3,24 @@
  */
 
 #include "logger.hpp"
+#include "verror.hpp"
 #include "GL/glfw.h"
 
 namespace vexal
 {
 	
-	int __stdcall OGLStartup()
+	bool __stdcall OGLStartup()
 	{
 		// Attempt to start up GLFW
 		if(!glfwInit())
 		{
 			e("Could not start up GLFW!");
-			return 1;
+			SetVError(V_ERR_OGL_GLFWINIT);
+			return false;
 		}
 
 		// All is good
-		return 0;
+		return true;
 	}
 
 }

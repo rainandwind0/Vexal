@@ -10,7 +10,7 @@ namespace vexal
 	/**
 	 * Starts up OpenGL stuff
 	 */
-	int __stdcall OGLStartup();
+	bool __stdcall OGLStartup();
 
 }
 

@@ -20,6 +20,7 @@
 #include "logger.hpp"
 #include "vversion.hpp"
 #include "OGLInit.hpp"
+#include "verror.hpp"
 
 using namespace std;
 using namespace vexal;
@@ -33,8 +34,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	i("Vexal Online "V_FULLVERSION);
 	
 	// Init OpenGL/Graphics
-	if(OGLStartup() > V_SUCCESS)
-		return 1;
+	if(!OGLStartup())
+		return GetLastVError();
 	else
 		f1("OGLStartup succeeded!");
 	
