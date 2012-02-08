@@ -1,3 +1,6 @@
 *.user
 *.ncb
 bin/
+Debug/
+Release/
+*.lib
