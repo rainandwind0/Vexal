@@ -14,56 +14,50 @@
 
 namespace vexal
 {
-	// Define static members
+	// Define static instance
+	#if V_LOG != 2
+
 	Log* Log::inst;
 
-	void Log::_VLogInit(int level)
+	void Log::_VLogInit()
 	{
 		// Create instance if needed
 		if(!Log::inst)
-			Log::inst = new Log(level);
+			Log::inst = new Log();
 	}
+	#endif
 
-	void Log::msgInd(const char* tag, const char* msg, int level)
+	void Log::msgInd(const char* tag, const char* msg)
 	{
-		// Switch level
-		switch(level)
-		{
-		case 3: // Output to console
+		// Check log level
+		#if V_LOG == 3
 			std::cout << tag << msg << std::endl;
-			break;
-		case 2: // Output to debugger
+		#elif V_LOG == 2
 			OutputDebugString(tag);
 			OutputDebugString(msg);
 			OutputDebugString("\n");
-			break;
-		case 1: // Output to log file
+		#elif V_LOG == 1
 			(*(inst->flLog)) << tag << msg << std::endl;
-			break;
-		}
+		#endif
 	}
 
-	Log::Log(int type)
+	#if V_LOG != 2
+	Log::Log()
 	{
-		// Store level
-		lv = type;
-
 		// Check log type
-		switch(type)
-		{
-		case 3: // Console Output (Attach Console)
+		#if V_LOG == 3
 			vexal::VAttachConsole();
-			break;
-		case 1: // File logging (Create log file)
+		#elif V_LOG == 1
 			flLog = new std::ofstream("vexal.log", std::ios::out | std::ios::trunc);
-			break;
-		}
+		#endif
 	}
+	#endif
 
+	#if V_LOG == 1
 	Log::~Log()
 	{
 		// Close log if needed
-		if(lv > 0 && flLog->is_open())
+		if(flLog->is_open())
 		{
 			// Close handle
 			flLog->close();
@@ -72,6 +66,7 @@ namespace vexal
 			delete flLog;
 		}
 	}
+	#endif
 }
 
 #endif

@@ -23,42 +23,45 @@
 	/**
 	 * Initializes the logging instance
 	 */
-	#define VLogInit() vexal::Log::_VLogInit(V_LOG)
-
+	#if V_LOG !=2
+		#define VLogInit() vexal::Log::_VLogInit()
+	#else
+		#define VLogInit()
+	#endif
 	/**
 	 * Logs an info message
 	 */
-	#define i(a) vexal::Log::msgInd("[INFO] ", a, V_LOG)
+	#define i(a) vexal::Log::msgInd("[INFO] ", a)
 
 	/**
 	 * Logs a warning message
 	 */
-	#define w(a) vexal::Log::msgInd("[WARNING] ", a, V_LOG)
+	#define w(a) vexal::Log::msgInd("[WARNING] ", a)
 
 	/**
 	 * Logs an error message
 	 */
-	#define e(a) vexal::Log::msgInd("[ERROR] ", a, V_LOG)
+	#define e(a) vexal::Log::msgInd("[ERROR] ", a)
 
 	/**
 	 * Logs a fine-level message
 	 */
-	#define f1(a) vexal::Log::msgInd("[FINE] ", a, V_LOG)
+	#define f1(a) vexal::Log::msgInd("[FINE] ", a)
 
 	/**
 	 * Logs a finer-level message
 	 */
-	#define f2(a) vexal::Log::msgInd("[FINER] ", a, V_LOG)
+	#define f2(a) vexal::Log::msgInd("[FINER] ", a)
 
 	/**
 	 * Logs a finest-level message
 	 */
-	#define f3(a) vexal::Log::msgInd("[FINEST] ", a, V_LOG)
+	#define f3(a) vexal::Log::msgInd("[FINEST] ", a)
 
 	/**
 	 * Logs a config message
 	 */
-	#define cfg(a) vexal::Log::msgInd("[CONFIG] ", a, V_LOG)
+	#define cfg(a) vexal::Log::msgInd("[CONFIG] ", a)
 
 namespace vexal
 {
@@ -66,16 +69,20 @@ namespace vexal
 	class Log
 	{
 	public:
-		static void _VLogInit(int level);
-		static void msgInd(const char* tag, const char* msg, int level);
+#if V_LOG != 2
+		static void _VLogInit();
+#endif
+		static void msgInd(const char* tag, const char* msg);
 	private:
-		Log(int v);
-		~Log();
-
+#if V_LOG != 2
+		Log();
 		static Log* inst;
+#endif
 
+#if V_LOG == 1
+		~Log();
 		std::ofstream* flLog;
-		int lv;
+#endif
 	};
 
 }

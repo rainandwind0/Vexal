@@ -23,13 +23,16 @@
 #include "defs.h"
 
 using namespace glm;
-using namespace vexal;
 using namespace std;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, int nShowCmd)
 {
 	// Generate logger instance (instantiate logging)
 	VLogInit();
+
+	// Log!
+	i("Testing!!!");
+	Sleep(1000);
 
 	// All okay!
 	return 0;
