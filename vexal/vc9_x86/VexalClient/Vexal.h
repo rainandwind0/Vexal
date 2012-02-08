@@ -14,12 +14,10 @@
  *                          With love,
  *                              Qix
  */
-#include <Windows.h>
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, int nShowCmd)
-{
-	
+#ifndef VEXAL_H__
+#define VEXAL_H__
 
-	// All okay!
-	return 0;
-}
+
+
+#endif
