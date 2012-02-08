@@ -33,9 +33,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	i("Vexal Online "V_FULLVERSION);
 	
 	// Init OpenGL/Graphics
-	if(!OGLStartup())
+	if(OGLStartup() > 0)
 		return 1;
-
+	else
+		f1("OGLStartup succeeded!");
 	
 	// All okay!
 	f1("Terminating Program");
