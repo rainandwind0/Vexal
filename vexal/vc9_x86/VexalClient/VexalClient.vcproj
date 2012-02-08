@@ -40,6 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="C:\Users\Jake\Documents\Vexal2\glm;C:\Users\Jake\Documents\Vexal2\glfw\include;C:\Users\Jake\Documents\Vexal2\glew\include"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -109,6 +110,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
+				AdditionalIncludeDirectories="C:\Users\Jake\Documents\Vexal2\glm\glm"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
 				WarningLevel="3"
@@ -165,18 +167,36 @@
 				RelativePath=".\Vexal.cpp"
 				>
 			</File>
+			<Filter
+				Name="Output"
+				>
+				<File
+					RelativePath=".\console.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
-		</Filter>
-		<Filter
-			Name="Resource Files"
-			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
-			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
-			>
+			<File
+				RelativePath=".\defs.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vexal.h"
+				>
+			</File>
+			<Filter
+				Name="Output"
+				>
+				<File
+					RelativePath=".\console.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 	</Files>
 	<Globals>

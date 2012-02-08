@@ -15,10 +15,20 @@
  *                              Qix
  */
 #include <Windows.h>
+#include <iostream>
+
+#include "gl/glfw.h"
+#include "glm/glm.hpp"
+#include "console.h"
+
+using namespace glm;
+using namespace vexal;
+using namespace std;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, int nShowCmd)
 {
-	
+	// Redirect output
+	VAttachConsole();
 
 	// All okay!
 	return 0;
