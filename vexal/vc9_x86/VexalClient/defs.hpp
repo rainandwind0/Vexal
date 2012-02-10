@@ -49,4 +49,18 @@
 #define V_ERR_OGL_WINDOW		0x02
 #define V_ERR_OGL_GLEWINIT		0x03
 
+/*
+ * Placeholder Operating System Macros
+ *
+ * This section allows us to change the default
+ * system macros defined for each compiler
+ */
+#if defined(_WIN32)
+#define VWIN32
+#elif defined(LINUX)
+#define VLINUX
+#elif defined(__APPLE__)
+#define VAPPLE
+#endif
+
 #endif
