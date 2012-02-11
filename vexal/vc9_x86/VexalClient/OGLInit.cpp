@@ -44,7 +44,7 @@ namespace vexal
 
 		// Create the window
 		f1("Creating main window");
-		if(!glfwOpenWindow(V_OGL_WINDOW_W, V_OGL_WINDOW_H, 0,0,0,0,16,0, GLFW_WINDOW))
+		if(!glfwOpenWindow(V_OGL_WINDOW_W, V_OGL_WINDOW_H, 0,0,0,0,16,0, V_OGL_WINMODE))
 		{
 			e("Could not create main window!");
 			SetVError(V_ERR_OGL_WINDOW);

@@ -4,6 +4,9 @@
 #ifndef DEFS_H__
 #define DEFS_H__
 
+#include "gl/glew.h"
+#include "gl/glfw.h"
+
 /*
  * Define log method
  *
@@ -39,6 +42,17 @@
 /*********************************************
  * DO NOT EDIT PAST THIS LINE
  ********************************************/
+
+/*
+ * The window mode
+ *
+ * Values can be:
+ *  GLFW_WINDOW
+ *  GLFW_WINDOW_NO_RESIZE (broken)
+ *  GLFW_FULLSCREEN
+ * 
+ */
+#define V_OGL_WINMODE GLFW_WINDOW
 
 /*
  * Error Codes
