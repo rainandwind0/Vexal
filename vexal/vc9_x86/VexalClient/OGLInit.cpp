@@ -79,13 +79,7 @@ namespace vexal
 		f1("Enabling sticky keys");
 		glfwEnable(GLFW_STICKY_KEYS);
 
-		//Begin window loop
-		do
-		{
-
-			glfwSwapBuffers();
-		} // Escape key or window closed
-		while(glfwGetKey(GLFW_KEY_ESC) != GLFW_PRESS && glfwGetWindowParam(GLFW_OPENED));
+		
 		
 		// All is good
 		return true;

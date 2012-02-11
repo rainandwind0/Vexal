@@ -208,6 +208,10 @@
 					RelativePath=".\OGLInit.cpp"
 					>
 				</File>
+				<File
+					RelativePath=".\OGLMain.cpp"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="File"
@@ -264,6 +268,10 @@
 				>
 				<File
 					RelativePath=".\OGLInit.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\OGLMain.hpp"
 					>
 				</File>
 			</Filter>
