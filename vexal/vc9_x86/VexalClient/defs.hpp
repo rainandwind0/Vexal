@@ -13,7 +13,7 @@
  * 3 - Use console outputs
  */
 
-#define V_LOG 1
+#define V_LOG 2
 
 /*
  * Define console scrollback length (in lines)
