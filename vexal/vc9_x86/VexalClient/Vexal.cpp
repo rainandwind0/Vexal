@@ -59,7 +59,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	// Fork thread for window events
 	hMainWindow = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)&tcbMainWindow, NULL, 0, thMainWindow);
 	
-	// Alloc statuc
+	// Alloc status
 	DWORD status;
 
 	// Wait for all threads to return
@@ -85,6 +85,7 @@ DWORD tcbMainWindow(LPVOID lpdwThreadParam)
 	do
 	{
 
+		glfwSwapBuffers();
 	} // Escape key or window closed
 	while(glfwGetKey(GLFW_KEY_ESC) != GLFW_PRESS && glfwGetWindowParam(GLFW_OPENED));
 

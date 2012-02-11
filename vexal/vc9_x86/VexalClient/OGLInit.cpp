@@ -37,10 +37,10 @@ namespace vexal
 
 		// Create window hints
 		f1("Setting window hints");
-		//glfwOpenWindowHint(GLFW_FSAA_SAMPLES, V_OGL_ANTIALIAS);
-		//glfwOpenWindowHint(GLFW_OPENGL_VERSION_MAJOR, 3); // We want 4.0!
-		//glfwOpenWindowHint(GLFW_OPENGL_VERSION_MINOR, 2);
-		//glfwOpenWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+		glfwOpenWindowHint(GLFW_FSAA_SAMPLES, V_OGL_ANTIALIAS);
+		glfwOpenWindowHint(GLFW_OPENGL_VERSION_MAJOR, 3); // We want 4.0!
+		glfwOpenWindowHint(GLFW_OPENGL_VERSION_MINOR, 2);
+		glfwOpenWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 		// Create the window
 		f1("Creating main window");
@@ -67,7 +67,7 @@ namespace vexal
 		glfwSetWindowTitle(V_WINDOW_TITLE);
 
 		glfwSetKeyCallback( handle_key_down );
-		glfwEnable( GLFW_KEY_REPEAT );
+		glfwEnable(GLFW_KEY_REPEAT);
 
 		glfwSwapInterval( 1 );
 
@@ -76,9 +76,17 @@ namespace vexal
 		glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
 		// Lastly, setup basic sticky keys
-		//f1("Enabling sticky keys");
-		//glfwEnable(GLFW_STICKY_KEYS);
+		f1("Enabling sticky keys");
+		glfwEnable(GLFW_STICKY_KEYS);
 
+		//Begin window loop
+		do
+		{
+
+			glfwSwapBuffers();
+		} // Escape key or window closed
+		while(glfwGetKey(GLFW_KEY_ESC) != GLFW_PRESS && glfwGetWindowParam(GLFW_OPENED));
+		
 		// All is good
 		return true;
 	}
