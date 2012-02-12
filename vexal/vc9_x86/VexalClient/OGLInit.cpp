@@ -44,7 +44,7 @@ namespace vexal
 
 		// Create the window
 		f1("Creating main window");
-		if(!glfwOpenWindow(V_OGL_WINDOW_W, V_OGL_WINDOW_H, 0,0,0,0,16,0, V_OGL_WINMODE))
+		if(!glfwOpenWindow(V_OGL_WINDOW_W, V_OGL_WINDOW_H, 0,0,0,0,0,0, V_OGL_WINMODE))
 		{
 			e("Could not create main window!");
 			SetVError(V_ERR_OGL_WINDOW);
@@ -66,10 +66,12 @@ namespace vexal
 		f1("Setting window title");
 		glfwSetWindowTitle(V_WINDOW_TITLE);
 
+		// Set key callback
 		glfwSetKeyCallback( handle_key_down );
 		glfwEnable(GLFW_KEY_REPEAT);
 
-		glfwSwapInterval( 1 );
+		// Set swap interval
+		glfwSwapInterval(1);
 
 		// Clear the screen / set BG color
 		f1("Clearing background");

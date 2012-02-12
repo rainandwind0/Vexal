@@ -7,15 +7,19 @@
 #include "logger.hpp"
 
 #include <vector>
+#include <iostream>
 
 namespace vexal
 {
-	std::vector<vbit*> vbit::bits(V_BITMEM_TOTAL);
+	std::vector<vbit*> vbit::bits;
 
 	vbit::vbit(vblocation bloc)
 	{
 		// Store the location
 		offset = bloc;
+
+		// Setup basic values
+		glData.len = 0;
 	}
 
 	vblocation vbit::getLocation()
@@ -82,8 +86,42 @@ namespace vexal
 		if(bits.size() >= V_BITMEM_TOTAL)
 			recalcVectors();
 
+
 		// Add
 		bits.push_back(this);
+	}
+
+	void vbit::calculatePolys()
+	{
+		// Re-init cache
+		_initGLCache();
+	}
+
+	void vbit::_initGLCache()
+	{
+		const GLfloat g_vertex_buffer_data[] = {
+			-1.0f, -1.0f, 0.0f,
+			1.0f, -1.0f, 0.0f,
+			0.0f,  1.0f, 0.0f,
+		};
+
+
+		glGenBuffers(1, &glData.uint);
+
+		// The following commands will talk about our 'vertexbuffer' buffer
+		glBindBuffer(GL_ARRAY_BUFFER, glData.uint);
+
+		// Give our vertices to OpenGL.
+		glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
+
+		/*// Generate 1 buffer, put the resulting identifier in vertexbuffer
+		glGenBuffers(1, &glData.uint);
+
+		// The following commands will talk about our 'vertexbuffer' buffer
+		glBindBuffer(GL_ARRAY_BUFFER, glData.uint);
+
+		// Give our vertices to OpenGL.
+		glBufferData(GL_ARRAY_BUFFER, sizeof(glData.data), glData.data, GL_STATIC_DRAW);*/
 	}
 
 	void vbit::recalcVectors()
@@ -92,6 +130,6 @@ namespace vexal
 		// this requires a position for reloading bits
 		// For now, error out!
 		e("CANNOT RECALC VECTORS! NOT IMPLEMENTED!");
-		exit(1);
+		//exit(1);
 	}
 }

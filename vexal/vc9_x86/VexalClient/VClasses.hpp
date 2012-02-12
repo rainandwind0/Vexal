@@ -12,6 +12,13 @@ namespace vexal
 {
 	typedef long vvlocation;
 
+	struct voglfltdata
+	{
+		GLfloat* data;
+		unsigned int len;
+		GLuint uint;
+	};
+
 	struct vblocation
 	{
 		union
@@ -73,17 +80,19 @@ namespace vexal
 		/**
 		 * Recalculates a Bit's polys from the loaded data
 		 */
-		void recalcPolys();
+		void calculatePolys();
 
 		/**
 		 * The raw voxel data
 		 */
-		unsigned char voxels[16777216];
-	protected:
-		vblocation offset;
-		GLfloat vecPoints[];
+		unsigned char voxels[V_BITMEM_VTOTAL];
+
+		voglfltdata glData;
 
 		static std::vector<vbit*> bits;
+	protected:
+		vblocation offset;
+		void _initGLCache();
 	};
 }
 

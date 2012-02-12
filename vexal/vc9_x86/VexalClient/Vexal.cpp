@@ -53,11 +53,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 		return GetLastVError();
 	else // Log that we succeeded
 		f1("OGLStartup succeeded!");
-	
-	// Just testing
-	std::stringstream ss;
-	ss<<"Long: " << vbit::getVoxelOffset(5, 6, 7);
-	i(ss.str().c_str());
 
 	// Startup main OpenGL window thread
 	if(!OGLMain())

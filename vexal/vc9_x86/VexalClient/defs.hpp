@@ -16,7 +16,7 @@
  * 3 - Use console outputs
  */
 
-#define V_LOG 2
+#define V_LOG 3
 
 /*
  * Define console scrollback length (in lines)
@@ -58,7 +58,10 @@
  * Voxel loading/memory values
  */
 #define V_BITMEM_GRID 3
-#define V_BITMEM_TOTAL V_BITMEM_GRID^2
+#define V_BITMEM_TOTAL V_BITMEM_GRID * V_BITMEM_GRID
+
+#define V_BITMEM_BITSIZE 256
+#define V_BITMEM_VTOTAL V_BITMEM_BITSIZE * V_BITMEM_BITSIZE * V_BITMEM_BITSIZE
 
 /*
  * Error Codes
