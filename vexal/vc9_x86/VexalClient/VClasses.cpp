@@ -29,9 +29,9 @@ namespace vexal
 		// Give them the long
 		long ret;
 		ret = x;
-		ret << 8;
+		ret = ret << 8;
 		ret += y;
-		ret << 8;
+		ret = ret << 8;
 		ret += z;
 		return ret;
 	}

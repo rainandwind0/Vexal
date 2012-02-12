@@ -22,6 +22,8 @@
 #include "OGLInit.hpp"
 #include "verror.hpp"
 #include "OGLMain.hpp"
+#include "VClasses.hpp"
+#include <sstream>
 
 #include "gl/glew.h"
 #include "gl/glfw.h"
@@ -52,6 +54,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevious, LPSTR lpComString, 
 	else // Log that we succeeded
 		f1("OGLStartup succeeded!");
 	
+	// Just testing
+	std::stringstream ss;
+	ss<<"Long: " << vbit::getVoxelOffset(5, 6, 7);
+	i(ss.str().c_str());
+
 	// Startup main OpenGL window thread
 	if(!OGLMain())
 		return GetLastVError();
