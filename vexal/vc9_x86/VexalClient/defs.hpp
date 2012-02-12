@@ -55,6 +55,12 @@
 #define V_OGL_WINMODE GLFW_WINDOW
 
 /*
+ * Voxel loading/memory values
+ */
+#define V_BITMEM_GRID 3
+#define V_BITMEM_TOTAL V_BITMEM_GRID^2
+
+/*
  * Error Codes
  */
 #define V_SUCCESS				0x00

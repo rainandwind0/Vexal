@@ -4,9 +4,13 @@
 #ifndef VCLASSES_H__
 #define VCLASSES_H__
 
+#include "defs.hpp"
+
+#include <vector>
+
 namespace vexal
 {
-	typedef long vvloc;
+	typedef long vvlocation;
 
 	struct vblocation
 	{
@@ -29,12 +33,17 @@ namespace vexal
 		/**
 		 * Sets the voxel type at a specific position within the Bit
 		 */
-		void setVoxelType(char x, char y, char z);
+		void setVoxelType(char type, char x, char y, char z);
 
 		/**
 		 * Unloads the Bit from memory
 		 */
 		void unload();
+
+		/**
+		 * Loads this chunk into the register
+		 */
+		void load();
 
 		/**
 		 * Gets the Bit location
@@ -44,16 +53,37 @@ namespace vexal
 		/**
 		 * Gets the specified long offset of a specific voxel in the Bit
 		 */
-		long getVoxelOffset(char x, char y, char z);
+		static long getVoxelOffset(char x, char y, char z);
 		
 		/**
 		 * Returns the x,y,z position from a long offset in a Bit
 		 */
-		void getVoxelPosition(long offset, char &x, char &y, char &z);
+		static void getVoxelPosition(long offset, char &x, char &y, char &z);
 
-		char voxels[16777216];
+		/**
+		 * Creates a vbit object at the specified location
+		 */
+		vbit(vblocation bloc);
+
+		/**
+		 * Cleans up the loaded bits and unloads any unnecessary bits from the stack
+		 */
+		static void recalcVectors();
+
+		/**
+		 * Recalculates a Bit's polys from the loaded data
+		 */
+		void recalcPolys();
+
+		/**
+		 * The raw voxel data
+		 */
+		unsigned char voxels[16777216];
 	protected:
-		static vbit* bits = new vbit[25]; 
+		vblocation offset;
+		GLfloat vecPoints[];
+
+		static std::vector<vbit*> bits;
 	};
 }
 
