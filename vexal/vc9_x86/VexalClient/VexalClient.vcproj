@@ -221,6 +221,14 @@
 				Name="File"
 				>
 			</Filter>
+			<Filter
+				Name="Vexal"
+				>
+				<File
+					RelativePath=".\VClasses.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -286,6 +294,14 @@
 			<Filter
 				Name="File"
 				>
+			</Filter>
+			<Filter
+				Name="Vexal"
+				>
+				<File
+					RelativePath=".\VClasses.hpp"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<File
