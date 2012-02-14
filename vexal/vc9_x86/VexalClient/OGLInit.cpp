@@ -80,8 +80,6 @@ namespace vexal
 		// Lastly, setup basic sticky keys
 		f1("Enabling sticky keys");
 		glfwEnable(GLFW_STICKY_KEYS);
-
-		
 		
 		// All is good
 		return true;
