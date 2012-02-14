@@ -15,24 +15,6 @@ namespace vexal
 {
 	bool __stdcall OGLMain()
 	{
-		// TEST BIT
-		vblocation loc = {0, 0, 0};
-		vbit* testbit = new vbit(loc);
-
-
-		GLfloat g_vertex_buffer_data[] = {
-			-1.0f, -1.0f, 0.0f,
-			1.0f, -1.0f, 0.0f,
-			0.0f,  1.0f, 0.0f,
-		};
-
-		testbit->glData.data = &g_vertex_buffer_data[0];
-		testbit->glData.len = 3;
-		testbit->calculatePolys();
-
-		testbit->load();
-
-
 		// Start main loop
 		do
 		{
