@@ -99,12 +99,6 @@ namespace vexal
 
 	void vbit::_initGLCache()
 	{
-		const GLfloat g_vertex_buffer_data[] = {
-			-1.0f, -1.0f, 0.0f,
-			1.0f, -1.0f, 0.0f,
-			0.0f,  1.0f, 0.0f,
-		};
-
 
 		glGenBuffers(1, &glData.uint);
 
@@ -112,7 +106,7 @@ namespace vexal
 		glBindBuffer(GL_ARRAY_BUFFER, glData.uint);
 
 		// Give our vertices to OpenGL.
-		glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, glData.len * 12, glData.data, GL_STATIC_DRAW);
 
 		/*// Generate 1 buffer, put the resulting identifier in vertexbuffer
 		glGenBuffers(1, &glData.uint);

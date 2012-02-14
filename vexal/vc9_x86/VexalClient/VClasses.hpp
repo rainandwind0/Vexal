@@ -14,7 +14,14 @@ namespace vexal
 
 	struct voglfltdata
 	{
+		/**
+		 * Pointer to the FIRST element array
+		 */
 		GLfloat* data;
+
+		/**
+		 * Number of points (x, y, z) in array
+		 */
 		unsigned int len;
 		GLuint uint;
 	};
