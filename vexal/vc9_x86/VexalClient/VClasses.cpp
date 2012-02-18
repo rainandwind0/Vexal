@@ -93,6 +93,8 @@ namespace vexal
 
 	void vbit::calculatePolys()
 	{
+
+
 		// Re-init cache
 		_initGLCache();
 	}

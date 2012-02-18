@@ -16,6 +16,7 @@
  */
 #include <Windows.h>
 #include <iostream>
+#include <sstream>
 
 #include "logger.hpp"
 #include "vversion.hpp"
@@ -23,7 +24,6 @@
 #include "verror.hpp"
 #include "OGLMain.hpp"
 #include "VClasses.hpp"
-#include <sstream>
 
 #include "gl/glew.h"
 #include "gl/glfw.h"

@@ -228,6 +228,10 @@
 					RelativePath=".\VClasses.cpp"
 					>
 				</File>
+				<File
+					RelativePath=".\VContentServer.cpp"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
@@ -237,10 +241,6 @@
 			>
 			<File
 				RelativePath=".\defs.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\resource.hpp"
 				>
 			</File>
 			<File
@@ -300,6 +300,10 @@
 				>
 				<File
 					RelativePath=".\VClasses.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\VContentServer.h"
 					>
 				</File>
 			</Filter>
