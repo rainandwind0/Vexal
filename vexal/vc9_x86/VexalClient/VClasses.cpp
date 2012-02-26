@@ -68,7 +68,7 @@ namespace vexal
 	{
 		// Find n
 		char n = -1;
-		for(int i = 0; i < V_BITMEM_TOTAL; i++)
+		for(std::vector<vbit*>::iterator i = bits.begin(); i != bits.end(); i++)
 			if(bits[i] = this)
 				n = i;
 
