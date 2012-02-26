@@ -19,7 +19,7 @@ namespace vexal
 		 */
 		bool online();
 
-
+		
 	protected:
 		static VContentServer* inst;
 		VContentServer();

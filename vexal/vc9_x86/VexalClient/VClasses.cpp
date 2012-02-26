@@ -93,7 +93,29 @@ namespace vexal
 
 	void vbit::calculatePolys()
 	{
+		// Generate profile
+		for(unsigned long i = 0; i < V_BITMEM_VTOTAL; i++)
+		{
+			// Get position
+			unsigned char x, y, z;
+			vbit::getVoxelPosition(i, &x, &y, &z);
 
+			// Setup long
+			unsigned long ncheck;
+
+			// Check top
+			if(y < V_BITMEM_BITSIZEM1)
+			{
+				ncheck = vbit::getVoxelOffset(x, y + 1, z);
+				
+			}
+
+			// Check bottom
+			// Check left
+			// Check right
+			// Check back
+			// Check front
+		}
 
 		// Re-init cache
 		_initGLCache();
