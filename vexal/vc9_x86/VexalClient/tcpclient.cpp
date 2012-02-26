@@ -2,16 +2,31 @@
  * TCPClient                                                            
  */
 
-
+#include "defs.hpp"
 #include "logger.hpp"
 #include "tcpclient.hpp"
 
+#if defined(VWIN32)
 #include <winsock2.h>
+
+#elif defined(VLINUX)
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <unistd.h>
+#include <errno.h>
+#endif
 
 namespace vexal
 {
 	TCPClient::TCPClient()
 	{
+#if defined(VWIN32)
 		// Log
 		f1("Starting TCP connection");
 
@@ -149,7 +164,10 @@ namespace vexal
 			e("An attempt to connect a datagram socket to broadcast address failed because setsockopt option SO_BROADCAST is not enabled.");
 			return;
 		}
+#elif defined(VLINUX)
 
+
+#endif
 		// Log that we've connected!
 		i("Client Connected!");
 	}
@@ -157,10 +175,14 @@ namespace vexal
 
 	TCPClient::~TCPClient()
 	{
+#if defined(VWIN32)
 		// Shutdown socket
 		shutdown(_sock, SD_BOTH);
 
 		// Cleanup WSA
 		WSACleanup();
+#elif defined(VLINUX)
+
+#endif
 	}
 }
